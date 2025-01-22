@@ -85,8 +85,12 @@
 }
 
 section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   column-gap: 4rem;
   row-gap: 4rem;
   width: 95%;
@@ -94,6 +98,7 @@ section {
 }
 
 .product p {
+  width: 20rem;
   font-size: 0.8rem;
 }
 
@@ -113,6 +118,7 @@ section {
 .dateCon {
   display: flex;
   gap: 2rem;
+  width: 20rem;
   padding-bottom: 0.4rem;
 }
 
@@ -122,6 +128,7 @@ section {
 }
 
 .title {
+  width: 20rem;
   font-size: 1rem;
   padding-bottom: 0.8rem;
 }
@@ -137,6 +144,8 @@ section {
   min-width: 1200px;
   margin: 0 auto;
   grid-template-columns: 40% 60%;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #a09f9f;
 }
 
 .grid1 {
@@ -145,7 +154,6 @@ section {
   gap: 0.6rem;
   width: 100%;
   flex-wrap: wrap;
-
 }
 
 .con1 {
@@ -193,6 +201,11 @@ section {
   margin-left: 1rem;
 }
 
+.btn a {
+  text-decoration: none;
+  color: #000;
+}
+
 .con2 {
   height: 11rem;
   width: 29rem;
@@ -233,7 +246,7 @@ section {
 .con3 {
   height: 26.5rem;
   border-radius: 6px;
-  width: 45rem;
+  /* width: 45rem; */
   background-color: #434343;
   background-image: url("./images/money.jpg");
   background-position: center;
@@ -355,11 +368,6 @@ footer {
   width: 1.8rem;
 }
 
-.red {
-  background-color: red;
-  display: none;
-}
-
 .text {
   font-size: 24px;
 }
@@ -369,7 +377,7 @@ footer {
 }
 
 .append {
-  background-color: rgba(149, 170, 197, 0);
+  background-color: aqua;
   color: rgb(53, 49, 49);
   border: 1px solid #68676755;
   outline: none;
@@ -397,7 +405,7 @@ footer {
 }
 
 .append1 {
-  background-color: rgba(149, 170, 197, 0);
+  background-color: aqua;
   color: rgb(53, 49, 49);
   border: 1px solid #68676755;
   outline: none;
@@ -425,7 +433,7 @@ footer {
 }
 
 .append2 {
-  background-color: rgba(149, 170, 197, 0);
+  background-color: aqua;
   color: rgb(53, 49, 49);
   border: 1px solid #68676755;
   outline: none;
@@ -453,7 +461,7 @@ footer {
 }
 
 .append3 {
-  background-color: rgba(149, 170, 197, 0);
+  background-color: aqua;
   color: rgb(53, 49, 49);
   border: 1px solid #68676755;
   outline: none;
@@ -481,7 +489,7 @@ footer {
 }
 
 .append4 {
-  background-color: rgba(149, 170, 197, 0);
+  background-color: aqua;
   color: rgb(53, 49, 49);
   border: 1px solid #68676755;
   outline: none;
@@ -508,7 +516,7 @@ footer {
 }
 
 .append5 {
-  background-color: rgba(149, 170, 197, 0);
+  background-color: aqua;
   color: rgb(53, 49, 49);
   border: 1px solid #68676755;
   outline: none;
@@ -535,7 +543,7 @@ footer {
 }
 
 .append6 {
-  background-color: rgba(149, 170, 197, 0);
+  background-color: aqua;
   color: rgb(53, 49, 49);
   border: 1px solid #68676755;
   outline: none;
@@ -630,10 +638,10 @@ footer {
     padding: 1rem;
   }
 
-  section {
+  /* section {
     grid-template-columns: 1fr;
     column-gap: 1rem;
-  }
+  } */
 
   .article {
     grid-template-columns: 1fr;
@@ -818,12 +826,12 @@ footer {
   .col3 {
     display: none;
   }
+}
 
-  @media (max-width: 360px) {
+@media (max-width: 360px) {
     .article {
       min-width: 100%;
       position: relative;
       right: 0.8rem;
     }
   }
-}
