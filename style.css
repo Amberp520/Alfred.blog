@@ -8,6 +8,10 @@
  
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .banner {
   background-repeat: no-repeat;
   background-position: center;
@@ -139,11 +143,9 @@ section {
 
 .article {
   display: grid;
-  width: 90%;
-  max-width: 600vw;
-  min-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   grid-template-columns: 40% 60%;
+  column-gap: 10px;
   padding-bottom: 4rem;
   border-bottom: 1px solid #a09f9f;
 }
@@ -158,7 +160,7 @@ section {
 
 .con1 {
   height: 15rem;
-  width: 29rem;
+  width: 100%;
   background-color: #434343;
   border-radius: 6px;
   background-image: url("./images/chain.jpg");
@@ -208,7 +210,7 @@ section {
 
 .con2 {
   height: 11rem;
-  width: 29rem;
+  width: 100%;
   background-color: #434343;
   border-radius: 6px;
   background-image: url("./images/Office.jpg");
@@ -244,15 +246,19 @@ section {
 }
 
 .con3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 26.5rem;
   border-radius: 6px;
-  /* width: 45rem; */
+  width: 100%;
   background-color: #434343;
   background-image: url("./images/money.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  text-align: center;
 }
 
 .darn {
@@ -263,13 +269,16 @@ section {
   color: #fff;
   border-radius: 6px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .darn p {
-  padding-top: 10rem;
+ width: fit-content;
   font-size: 1.3rem;
   width: 20rem;
-  margin-left: 12rem;
+  text-align: center;
 }
 
 footer {
@@ -645,7 +654,6 @@ footer {
 
   .article {
     grid-template-columns: 1fr;
-    min-width: 100%;
   }
 
   .Bg {
@@ -657,15 +665,8 @@ footer {
   }
 
   .con3 {
-    width: 30rem;
     height: 20rem;
     margin-top: 1rem;
-  }
-
-  .darn p {
-    position: relative;
-    right: 7.6rem;
-    bottom: 2rem;
   }
 
   footer {
@@ -718,7 +719,6 @@ footer {
   }
 
   .article {
-    min-width: 100%;
   }
 }
 
@@ -750,28 +750,6 @@ footer {
   }
 
   .article {
-    min-width: 100%;
-  }
-
-  .con1,
-  .con2 {
-    height: 12rem;
-    width: 22rem;
-  }
-
-  .con2 {
-    height: 10rem;
-  }
-
-  .con3 {
-    height: 12rem;
-    width: 22rem;
-  }
-
-  .darn p {
-    position: relative;
-    right: 11rem;
-    bottom: 4.7rem;
   }
 
   .btn {
@@ -830,7 +808,7 @@ footer {
 
 @media (max-width: 360px) {
     .article {
-      min-width: 100%;
+
       position: relative;
       right: 0.8rem;
     }
